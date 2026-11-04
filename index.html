@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCF Systems LLC - Official Website</title>
+
+    <title>TCF Systems LLC | Official Corporate Website</title>
+
+    <meta name="description" content="Official website of TCF Systems LLC, a software development and digital solutions company providing modern mobile applications and technology products.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+
     <style>
         * {
             margin: 0;
@@ -12,75 +19,88 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #0f172a;
+            font-family: Inter, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Arial, sans-serif;
+            background: #0f172a;
             color: #f8fafc;
             line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 24px 16px;
         }
 
         .main-card {
-            background: #1e293b;
             width: 100%;
             max-width: 700px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: #1e293b;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         }
 
+        /* Header */
+
         .hero-section {
-            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-            padding: 40px 30px;
+            background: linear-gradient(
+                135deg,
+                #4338ca 0%,
+                #2563eb 100%
+            );
+            padding: 42px 24px;
             text-align: center;
         }
 
         .hero-section h1 {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: clamp(25px, 5vw, 32px);
+            font-weight: 750;
             color: #ffffff;
+            letter-spacing: -0.5px;
             margin-bottom: 8px;
         }
 
         .hero-section p {
             font-size: 14px;
             color: #e0e7ff;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
+
+        /* Main Content */
 
         .content-body {
             padding: 35px 30px;
         }
 
         .section-heading {
-            font-size: 16px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #38bdf8;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin-bottom: 16px;
+            font-weight: 700;
         }
+
+        /* Company Details */
 
         .details-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         .detail-box {
             background: #0f172a;
-            padding: 18px;
+            padding: 19px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            min-width: 0;
         }
 
         .detail-box.full-width {
-            grid-column: span 2;
+            grid-column: 1 / -1;
         }
 
         .detail-box span {
@@ -88,82 +108,142 @@
             font-size: 11px;
             color: #94a3b8;
             text-transform: uppercase;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.7px;
+            margin-bottom: 7px;
+            font-weight: 600;
         }
 
         .detail-box strong {
+            display: block;
             font-size: 15px;
+            font-weight: 600;
             color: #f1f5f9;
+            overflow-wrap: anywhere;
         }
+
+        /* About Section */
 
         .about-box {
             background: #0f172a;
-            padding: 20px;
+            padding: 22px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
             font-size: 14px;
+            line-height: 1.85;
             color: #cbd5e1;
-            margin-bottom: 20px;
         }
+
+        /* Footer */
 
         .footer {
             background: #111827;
             text-align: center;
-            padding: 15px;
+            padding: 17px 20px;
             font-size: 12px;
-            color: #6b7280;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
+        /* Mobile Responsive */
+
         @media (max-width: 600px) {
+            body {
+                padding: 16px;
+                align-items: flex-start;
+            }
+
+            .hero-section {
+                padding: 34px 20px;
+            }
+
+            .content-body {
+                padding: 25px 20px;
+            }
+
             .details-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
+
             .detail-box.full-width {
-                grid-column: span 1;
+                grid-column: auto;
+            }
+
+            .detail-box {
+                padding: 17px;
+            }
+
+            .about-box {
+                padding: 18px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="main-card">
-        <!-- Header -->
-        <div class="hero-section">
-            <h1>TCF Systems LLC</h1>
-            <p>Official Corporate & Developer Portal</p>
-        </div>
+    <main class="main-card">
 
-        <!-- Body Content -->
-        <div class="content-body">
-            <div class="section-heading">Company Verification Profile</div>
+        <!-- Company Header -->
+        <header class="hero-section">
+            <h1>TCF Systems LLC</h1>
+            <p>Official Corporate &amp; Developer Portal</p>
+        </header>
+
+        <!-- Company Information -->
+        <section class="content-body">
+
+            <h2 class="section-heading">
+                Company Verification Profile
+            </h2>
+
             <div class="details-grid">
+
                 <div class="detail-box">
                     <span>Legal Entity Name</span>
-                    <strong>TCF Systems LLC</strong>[span_0](start_span)[span_0](end_span)
+                    <strong>TCF Systems LLC</strong>
                 </div>
+
                 <div class="detail-box">
-                    <span>DUNS Number</span>
-                    <strong>133643282</strong>[span_1](start_span)[span_1](end_span)
+                    <span>D-U-N-S Number</span>
+                    <strong>133643282</strong>
                 </div>
+
                 <div class="detail-box full-width">
                     <span>Official Registered Address</span>
-                    <strong>30 N Gould St Ste R Sheridan, WY 82801 USA</strong>[span_2](start_span)[span_2](end_span)
+                    <strong>
+                        30 N. Gould St., Ste. R,
+                        Sheridan, WY 82801, USA
+                    </strong>
                 </div>
+
             </div>
 
-            <div class="section-heading">About Us</div>
+            <!-- About Company -->
+            <h2 class="section-heading">
+                About Us
+            </h2>
+
             <div class="about-box">
-                TCF Systems LLC is an innovative software development and digital solutions provider. We specialize in building modern mobile applications, utility tools, and deploying robust technology products globally. Our core focus is delivering secure, high-performance, and reliable digital experiences to users worldwide.
+                TCF Systems LLC is a software development and
+                digital solutions company focused on building
+                modern mobile applications, practical utility
+                tools, and innovative technology products.
+
+                Our goal is to deliver reliable, user-friendly,
+                and high-quality digital experiences through
+                thoughtful software development and modern
+                technology solutions.
             </div>
-        </div>
+
+        </section>
 
         <!-- Footer -->
-        <div class="footer">
+        <footer class="footer">
             &copy; 2026 TCF Systems LLC. All Rights Reserved.
-        </div>
-    </div>
+        </footer>
+
+    </main>
 
 </body>
 </html>
