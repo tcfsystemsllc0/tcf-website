@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCF Systems LLC - Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-card {
+            background: #1e293b;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .hero-section p {
+            font-size: 14px;
+            color: #e0e7ff;
+            letter-spacing: 0.5px;
+        }
+
+        .content-body {
+            padding: 35px 30px;
+        }
+
+        .section-heading {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .detail-box {
+            background: #0f172a;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .detail-box.full-width {
+            grid-column: span 2;
+        }
+
+        .detail-box span {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-box strong {
+            font-size: 15px;
+            color: #f1f5f9;
+        }
+
+        .about-box {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background: #111827;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #6b7280;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            .detail-box.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <!-- Header -->
+        <div class="hero-section">
+            <h1>TCF Systems LLC</h1>
+            <p>Official Corporate & Developer Portal</p>
+        </div>
+
+        <!-- Body Content -->
+        <div class="content-body">
+            <div class="section-heading">Company Verification Profile</div>
+            <div class="details-grid">
+                <div class="detail-box">
+                    <span>Legal Entity Name</span>
+                    <strong>TCF Systems LLC</strong>[span_0](start_span)[span_0](end_span)
+                </div>
+                <div class="detail-box">
+                    <span>DUNS Number</span>
+                    <strong>133643282</strong>[span_1](start_span)[span_1](end_span)
+                </div>
+                <div class="detail-box full-width">
+                    <span>Official Registered Address</span>
+                    <strong>30 N Gould St Ste R Sheridan, WY 82801 USA</strong>[span_2](start_span)[span_2](end_span)
+                </div>
+            </div>
+
+            <div class="section-heading">About Us</div>
+            <div class="about-box">
+                TCF Systems LLC is an innovative software development and digital solutions provider. We specialize in building modern mobile applications, utility tools, and deploying robust technology products globally. Our core focus is delivering secure, high-performance, and reliable digital experiences to users worldwide.
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 TCF Systems LLC. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
